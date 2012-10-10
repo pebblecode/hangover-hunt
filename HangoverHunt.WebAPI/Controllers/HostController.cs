@@ -46,7 +46,7 @@ namespace HangoverHunt.WebAPI.Controllers
         [HttpPost]
         public ActionResult AddDefaultRiddles()
         {
-            GameState.CurrentHunt.AddRiddle(new LocationRiddle("Pebble Office", -0.11865019798278809, 51.485505247960916, 0.05));
+            GameState.CurrentHunt.AddRiddle(new LocationRiddle("Where are you now?", -0.11865019798278809, 51.485505247960916, 0.05));
             GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("What's in the fridge?", "Beeer"));
             GameState.CurrentHunt.AddRiddle(new LocationRiddle("This my home I'm black and yellow!", -0.11840343475341797, 51.4847703340828, 0.05));
             GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("What is the food special for tonight in Bee Hive?", "Buffalo Burgers"));
