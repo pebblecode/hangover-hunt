@@ -12,6 +12,7 @@ namespace HangoverHunt.WebAPI.Controllers
         [HttpGet]
         public ActionResult GetQuestion()
         {
+        
             return Json(new { Question = GameState.CurrentHunt.CurrentRiddle.Question }, JsonRequestBehavior.AllowGet);
         }
 
