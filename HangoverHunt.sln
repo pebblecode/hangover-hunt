@@ -1,16 +1,16 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangoverHunt", "HangoverHunt\HangoverHunt.csproj", "{86FBD616-C729-4E0B-9C80-69FD4AE4E231}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangoverHunt.UnitTests", "HangoverHunt.UnitTests\HangoverHunt.UnitTests.csproj", "{0F79F6B2-0296-445B-A285-C309692A16B3}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1F9A09B-8E38-419F-B61C-0303777A8FE7}"
 	ProjectSection(SolutionItems) = preProject
 		HangoverHunt.vsmdi = HangoverHunt.vsmdi
 		Local.testsettings = Local.testsettings
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangoverHunt", "HangoverHunt\HangoverHunt.csproj", "{86FBD616-C729-4E0B-9C80-69FD4AE4E231}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangoverHunt.UnitTests", "HangoverHunt.UnitTests\HangoverHunt.UnitTests.csproj", "{0F79F6B2-0296-445B-A285-C309692A16B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangoverHunt.App.V1", "HangoverHunt.App.V1\HangoverHunt.App.V1.csproj", "{2ECD2DD6-01EC-42BD-8F33-2D2ED9830594}"
 EndProject
