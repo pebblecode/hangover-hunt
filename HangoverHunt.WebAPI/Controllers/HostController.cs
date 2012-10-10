@@ -14,6 +14,11 @@ namespace HangoverHunt.WebAPI.Controllers
             return View(GameState.CurrentHunt);
         }
 
+        public ActionResult AddExactRiddle()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult AddExactRiddle(string question, string answer)
         {

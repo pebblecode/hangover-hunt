@@ -4,36 +4,37 @@
 }
 <h2>
     Manage Hunt</h2>
-<label for="hunt-state">State</label>
+<label for="hunt-state">
+    State</label>
 <input id="hunt-state" readonly="readonly" value="@Model.State" disabled="disabled" />
-<h3>Current Riddles</h3>
+<h3>
+    Current Riddles</h3>
 <table>
     <thead>
         <tr>
-            <th>Question</th>
-            <th>Answered</th>
+            <th>
+                Question
+            </th>
+            <th>
+                Answered
+            </th>
         </tr>
     </thead>
     @foreach (var riddleState in Model.RiddleStates)
     {
-    <tr>
-        <td>
-            @riddleState.Question
-        </td>
-        <td>
-            @Html.CheckBox("answered", riddleState.Answered, new { disabled = "disabled" })
-        </td>
-    </tr>
+        <tr>
+            <td>
+                @riddleState.Question
+            </td>
+            <td>
+                @Html.CheckBox("answered", riddleState.Answered, new { disabled = "disabled" })
+            </td>
+        </tr>
     }
 </table>
-@using (Html.BeginForm("AddExactRiddle", "Host"))
-{
-    <fieldset>
-        <legend>Add exact riddle</legend>
-        <label for="exact-question">Question:</label>
-        <input type="text" id="exact-question" name="question" />
-        <label for="exact-answer">Answer:</label>
-        <input type="text" id="exact-answer" name="answer" />
-        <input type="submit" value="Add riddle" />
-    </fieldset>
-}
+<h3>
+    Add riddle</h3>
+<ul>
+    <li>@Html.ActionLink("Add exact text riddle", "AddExactRiddle")</li>
+    <li>@Html.ActionLink("Add location riddle", "AddLocationRiddle")</li>
+</ul>

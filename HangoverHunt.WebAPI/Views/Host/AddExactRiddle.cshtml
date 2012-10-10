@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "AddExactRiddle";
+}
+
+<h2>AddExactRiddle</h2>
+@using (Html.BeginForm("AddExactRiddle", "Host"))
+{
+    <fieldset>
+        <legend>Add exact riddle</legend>
+        <label for="exact-question">Question:</label>
+        <input type="text" id="exact-question" name="question" />
+        <label for="exact-answer">Answer:</label>
+        <input type="text" id="exact-answer" name="answer" />
+        <input type="submit" value="Add riddle" />
+    </fieldset>
+}
