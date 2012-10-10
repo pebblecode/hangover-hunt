@@ -14,12 +14,13 @@ namespace HangoverHunt.WebAPI.Controllers
         public ActionResult Index(bool? result = null)
         {
             var currentRiddle = GameState.CurrentHunt.CurrentRiddle;
-            if (currentRiddle == null)
-                return View();
-
             dynamic model = new ExpandoObject();
-            model.Question = currentRiddle.Question;
             model.LastResult = result;
+
+            if (currentRiddle == null)
+                return View(model);
+
+            model.Question = currentRiddle.Question;
             return View(currentRiddle.GetType().Name, model);
         }
 
