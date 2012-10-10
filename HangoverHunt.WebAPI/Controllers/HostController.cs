@@ -42,5 +42,34 @@ namespace HangoverHunt.WebAPI.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public ActionResult AddDefaultRiddles()
+        {
+            GameState.CurrentHunt.AddRiddle(new LocationRiddle("This my home I'm black and yellow!", -0.1185714, 51.4849604, 0.05));
+            GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("What is the food special for tonight in Bee Hive?", "Buffalo Burgers"));
+            GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("What is the name of the waitress serving tonight in Bee Hive?", ""));
+            GameState.CurrentHunt.AddRiddle(new LocationRiddle("I'm wearing black fur a coat and I lap up my drink.", -0.1209497, 51.488652, 0.05)); //Black Dog
+            GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("What is the guest ale swims?", "Wild Swan"));
+            GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("What is the telephone nubmer of the waitress serving tonight in Black Dog?", ""));
+
+            
+            //GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("Which are the 5 most closest pubs near Bee Hive?", ""));
+            GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("Which is the most expensive beer that you can buy at Bee Hive?", ""));
+            GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("How many chairs are at Bee Hive?", ""));
+            GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("How many tables are at Bee Hive?", ""));
+            GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("What is the age of the barman at Bee Hive?", ""));
+            GameState.CurrentHunt.AddRiddle(new ExactAnswerRiddle("What brand are the TVs in Bee Hive?", ""));
+
+            //GameState.CurrentHunt.AddRiddle(new LocationRiddle("", 0.0, 0.0, 0.05);
+            //GameState.CurrentHunt.AddRiddle(new LocationRiddle("", 0.0, 0.0, 0.05);
+            //GameState.CurrentHunt.AddRiddle(new LocationRiddle("", 0.0, 0.0, 0.05);
+            //GameState.CurrentHunt.AddRiddle(new LocationRiddle("", 0.0, 0.0, 0.05);
+            //GameState.CurrentHunt.AddRiddle(new LocationRiddle("", 0.0, 0.0, 0.05);
+            //GameState.CurrentHunt.AddRiddle(new LocationRiddle("", 0.0, 0.0, 0.05);
+            //GameState.CurrentHunt.AddRiddle(new LocationRiddle("", 0.0, 0.0, 0.05);
+
+            return RedirectToAction("Index");
+        }
     }
 }

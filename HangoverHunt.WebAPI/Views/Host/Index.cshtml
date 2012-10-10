@@ -38,3 +38,8 @@
     <li>@Html.ActionLink("Add exact text riddle", "AddExactRiddle")</li>
     <li>@Html.ActionLink("Add location riddle", "AddLocationRiddle")</li>
 </ul>
+
+@using (Html.BeginForm("AddDefaultRiddles", "Host")) 
+{
+    <input type="submit" value="Add Default Riddles"/>
+}
