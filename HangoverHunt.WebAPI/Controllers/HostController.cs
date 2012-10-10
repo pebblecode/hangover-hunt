@@ -27,6 +27,15 @@ namespace HangoverHunt.WebAPI.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult AddLocationRiddle()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public ActionResult AddLocationRiddle(string question, double longitude, double latitude)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
