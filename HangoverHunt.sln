@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangoverHunt.App.V1", "HangoverHunt.App.V1\HangoverHunt.App.V1.csproj", "{2ECD2DD6-01EC-42BD-8F33-2D2ED9830594}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangoverHunt.WebAPI", "HangoverHunt.WebAPI\HangoverHunt.WebAPI.csproj", "{3ED22C9C-358C-410C-BA56-4CB64B3FE726}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangoverHunt.WebAPI", "HangoverHunt.WebAPI\HangoverHunt.WebAPI.csproj", "{30E872CC-97A2-4DFF-B509-071D2122BF8E}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -59,16 +59,16 @@ Global
 		{2ECD2DD6-01EC-42BD-8F33-2D2ED9830594}.Release|Mixed Platforms.Build.0 = Release|x86
 		{2ECD2DD6-01EC-42BD-8F33-2D2ED9830594}.Release|x86.ActiveCfg = Release|x86
 		{2ECD2DD6-01EC-42BD-8F33-2D2ED9830594}.Release|x86.Build.0 = Release|x86
-		{3ED22C9C-358C-410C-BA56-4CB64B3FE726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3ED22C9C-358C-410C-BA56-4CB64B3FE726}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3ED22C9C-358C-410C-BA56-4CB64B3FE726}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{3ED22C9C-358C-410C-BA56-4CB64B3FE726}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{3ED22C9C-358C-410C-BA56-4CB64B3FE726}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{3ED22C9C-358C-410C-BA56-4CB64B3FE726}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3ED22C9C-358C-410C-BA56-4CB64B3FE726}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3ED22C9C-358C-410C-BA56-4CB64B3FE726}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{3ED22C9C-358C-410C-BA56-4CB64B3FE726}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{3ED22C9C-358C-410C-BA56-4CB64B3FE726}.Release|x86.ActiveCfg = Release|Any CPU
+		{30E872CC-97A2-4DFF-B509-071D2122BF8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E872CC-97A2-4DFF-B509-071D2122BF8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E872CC-97A2-4DFF-B509-071D2122BF8E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{30E872CC-97A2-4DFF-B509-071D2122BF8E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{30E872CC-97A2-4DFF-B509-071D2122BF8E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{30E872CC-97A2-4DFF-B509-071D2122BF8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E872CC-97A2-4DFF-B509-071D2122BF8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30E872CC-97A2-4DFF-B509-071D2122BF8E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{30E872CC-97A2-4DFF-B509-071D2122BF8E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{30E872CC-97A2-4DFF-B509-071D2122BF8E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
