@@ -10,10 +10,19 @@ namespace HangoverHunt.WebAPI.Controllers
     public class PlayerController : Controller
     {
         [HttpGet]
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public ActionResult GetQuestion()
         {
-        
-            return Json(new { Question = GameState.CurrentHunt.CurrentRiddle.Question }, JsonRequestBehavior.AllowGet);
+            var currentRiddle = GameState.CurrentHunt.CurrentRiddle;
+            if (currentRiddle == null)
+                return Json(null, JsonRequestBehavior.AllowGet);
+
+            return Json(new { Question = currentRiddle.Question, Type = currentRiddle.GetType().Name }, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
