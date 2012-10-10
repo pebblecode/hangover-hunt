@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using HangoverHunt.WebAPI.Models;
+using System.Globalization;
 
 namespace HangoverHunt.WebAPI.Controllers
 {
@@ -36,8 +37,8 @@ namespace HangoverHunt.WebAPI.Controllers
         public ActionResult AddLocationRiddle(string question, string longitude, string latitude)
         {
             GameState.CurrentHunt.AddRiddle(new LocationRiddle(question, 
-                                            double.Parse(longitude),
-                                            double.Parse(latitude), 0.05));
+                                            double.Parse(longitude, CultureInfo.InstalledUICulture),
+                                            double.Parse(latitude, CultureInfo.InstalledUICulture), 0.05));
 
             return RedirectToAction("Index");
         }
