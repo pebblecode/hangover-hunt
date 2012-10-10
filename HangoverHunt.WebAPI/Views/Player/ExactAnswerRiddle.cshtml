@@ -1,0 +1,24 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "ExactAnswerRiddle";
+}
+
+@if (Model.LastResult == true)
+{
+    <p>Well done, next question!</p>
+}
+@if (Model.LastResult == false)
+{
+    <p>That wasn't the correct answer, guess again!</p>
+}
+<h2>Answer the following question:</h2>
+<h3>@Model.Question</h3>
+@using (Html.BeginForm("CheckResult", "Player"))
+{
+    <div>
+        <label for="answer">Answer:</label>
+        <input id="answer" name="answer" type="text" />
+    </div>
+    <input type="submit" value="Check Answer" />
+}

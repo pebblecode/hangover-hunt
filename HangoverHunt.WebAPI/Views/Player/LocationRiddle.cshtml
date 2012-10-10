@@ -1,0 +1,36 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "ExactAnswerRiddle";
+}
+
+@if (Model.LastResult == true)
+{
+    <p>Well done, next question!</p>
+}
+@if (Model.LastResult == false)
+{
+    <p>That wasn't the correct answer, guess again!</p>
+}
+<h2>Answer the following question to find your next location:</h2>
+<h3>@Model.Question</h3>
+@using (Html.BeginForm("CheckResultLocation", "Player"))
+{
+    <input id="lat" name="latitude" type="hidden" />
+    <input id="lon" name="longitude" type="hidden" />
+    <input id="check-location" type="submit" value="Check your location" />
+}
+<script type="text/javascript">
+    $(function () {
+        $('#check-location').click(function () {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (pos) {
+                    $('#lat').val(pos.coords.latitude);
+                    $('#lon').val(pos.coords.longitude);
+                    $('form').submit();
+                });
+            }
+            return false;
+        });
+    });
+</script>

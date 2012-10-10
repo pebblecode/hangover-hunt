@@ -32,7 +32,7 @@ namespace HangoverHunt
         {
             if (answer == null)
                 throw new ArgumentNullException("answer", "answer is null.");
-            if (answer.GetType() != typeof(TextAnswer))
+            if (answer.GetType() != typeof(LocationAnswer))
                 throw new InvalidOperationException("Location answer required.");
 
             return CheckAnswer((LocationAnswer)answer);

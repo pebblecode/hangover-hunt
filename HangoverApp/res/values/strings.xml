@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HangoverApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+        <string name="QuestionHeader">Question:</string>
+    <string name="Answer">Your Answer:</string>
+        <string name="Submit">Submit</string>
+           <string name="result">Question loading....</string>
+                    <string name="currentLocation">Submit Location</string>
+</resources>

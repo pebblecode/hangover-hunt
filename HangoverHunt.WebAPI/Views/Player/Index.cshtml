@@ -1,0 +1,12 @@
+﻿@model dynamic
+           
+@if (Model.LastResult == true)
+{
+    <h2>Congratulations, you completed the hangover hunt!</h2>
+    @Html.ActionLink("Wait for next game", "Index")
+}
+else
+{
+    <h2>No game in progress</h2>
+    @Html.ActionLink("Check for next game", "Index")
+}

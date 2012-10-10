@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,9 +11,17 @@ namespace HangoverHunt.WebAPI.Controllers
     public class PlayerController : Controller
     {
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(bool? result = null)
         {
-            return View();
+            var currentRiddle = GameState.CurrentHunt.CurrentRiddle;
+            dynamic model = new ExpandoObject();
+            model.LastResult = result;
+
+            if (currentRiddle == null)
+                return View(model);
+
+            model.Question = currentRiddle.Question;
+            return View(currentRiddle.GetType().Name, model);
         }
 
         [HttpGet]
@@ -25,11 +34,24 @@ namespace HangoverHunt.WebAPI.Controllers
             return Json(new { Question = currentRiddle.Question, Type = currentRiddle.GetType().Name }, JsonRequestBehavior.AllowGet);
         }
 
-        [HttpPost]
         public ActionResult CheckResult(string answer)
         {
             var result = GameState.CurrentHunt.CheckAnswer(new TextAnswer(answer));
-            return Json(result);
+
+            if (Request.IsAjaxRequest())
+                return Json(result);
+            else
+                return RedirectToAction("Index", new {result = result});
+        }
+
+        public ActionResult CheckResultLocation(double longitude, double latitude)
+        {
+            var result = GameState.CurrentHunt.CheckAnswer(new LocationAnswer(latitude, longitude));
+
+            if (Request.IsAjaxRequest())
+                return Json(result);
+            else
+                return RedirectToAction("Index", new { result = result });
         }
     }
 }

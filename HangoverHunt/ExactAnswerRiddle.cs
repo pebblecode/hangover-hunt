@@ -32,7 +32,7 @@ namespace HangoverHunt
             if (answer == null)
                 throw new ArgumentNullException("answer", "answer is null.");
 
-            return answer.AnswerText.Equals(_answer, StringComparison.InvariantCultureIgnoreCase);
+            return _answer.Equals(answer.AnswerText, StringComparison.InvariantCultureIgnoreCase);
         }
     }
 }
