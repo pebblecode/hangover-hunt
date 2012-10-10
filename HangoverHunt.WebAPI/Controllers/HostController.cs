@@ -31,11 +31,15 @@ namespace HangoverHunt.WebAPI.Controllers
         {
             return View();
         }
-
+         
         [HttpPost]
-        public ActionResult AddLocationRiddle(string question, double longitude, double latitude)
+        public ActionResult AddLocationRiddle(string question, string longitude, string latitude)
         {
-            throw new NotImplementedException();
+            GameState.CurrentHunt.AddRiddle(new LocationRiddle(question, 
+                                            double.Parse(longitude),
+                                            double.Parse(latitude), 0.05));
+
+            return RedirectToAction("Index");
         }
     }
 }
