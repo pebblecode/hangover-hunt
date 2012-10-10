@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using HangoverHunt.WebAPI.Models;
+using System.Globalization;
 
 namespace HangoverHunt.WebAPI.Controllers
 {
@@ -44,9 +45,11 @@ namespace HangoverHunt.WebAPI.Controllers
                 return RedirectToAction("Index", new {result = result});
         }
 
-        public ActionResult CheckResultLocation(double longitude, double latitude)
+        public ActionResult CheckResultLocation(string longitude, string latitude)
         {
-            var result = GameState.CurrentHunt.CheckAnswer(new LocationAnswer(latitude, longitude));
+            var result = GameState.CurrentHunt.CheckAnswer(
+                new LocationAnswer(double.Parse(latitude, CultureInfo.InvariantCulture),
+                                   double.Parse(longitude, CultureInfo.InvariantCulture)));
 
             if (Request.IsAjaxRequest())
                 return Json(result);
