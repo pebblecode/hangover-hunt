@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Hunt.cs" />
+    <Compile Include="HuntState.cs" />
     <Compile Include="IAnswer.cs" />
     <Compile Include="IRiddle.cs" />
     <Compile Include="ExactAnswerRiddle.cs" />
