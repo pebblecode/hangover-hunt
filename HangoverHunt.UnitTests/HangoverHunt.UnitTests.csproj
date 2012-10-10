@@ -45,8 +45,9 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DistanceCalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="RiddleTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HangoverHunt\HangoverHunt.csproj">

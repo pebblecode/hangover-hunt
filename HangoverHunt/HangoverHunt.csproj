@@ -40,11 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DistanceCalculator.cs" />
     <Compile Include="Hunt.cs" />
     <Compile Include="HuntState.cs" />
     <Compile Include="IAnswer.cs" />
     <Compile Include="IRiddle.cs" />
     <Compile Include="ExactAnswerRiddle.cs" />
+    <Compile Include="LocationAnswer.cs" />
+    <Compile Include="LocationRiddle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextAnswer.cs" />
   </ItemGroup>
