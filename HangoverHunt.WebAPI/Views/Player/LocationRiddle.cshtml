@@ -16,14 +16,21 @@
 <h3>@Model.Question</h3>
 @using (Html.BeginForm("CheckResultLocation", "Player"))
 {
-    <input name="latitude" type="text" value="51.48535158512941" />
-    <input name="longitude" type="text" value="-0.12208342552185059" />
+    <input id="lat" name="latitude" type="hidden" />
+    <input id="lon" name="longitude" type="hidden" />
     <input id="check-location" type="submit" value="Check your location" />
 }
 <script type="text/javascript">
     $(function () {
         $('#check-location').click(function () {
-            // Set lat and long values based on user location.
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (pos) {
+                    $('#lat').val(pos.coords.latitude);
+                    $('#lon').val(pos.coords.longitude);
+                    $('form').submit();
+                });
+            }
+            return false;
         });
     });
 </script>
